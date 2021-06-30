@@ -24,6 +24,12 @@ public class UserController {
 
     @Autowired
     UserRepository userRepository;
+
+    @GetMapping("")
+    public String getWelcome() {
+        return "Bienvenue chez moi";
+    }
+
     @GetMapping
     public List<User> getAllUsers()
     {
